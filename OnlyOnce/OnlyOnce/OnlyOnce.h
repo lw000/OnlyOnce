@@ -9,7 +9,6 @@ class OnlyOnce
 private:
 	std::atomic_int done;
 	std::mutex m;
-	[[deprecated]] int ccc{};
 
 public:
 	OnlyOnce();
@@ -17,8 +16,5 @@ public:
 
 public:
 	void Do(std::function<void()> f);
-
-	[[deprecated("deprecated")]]
-	void DoFunc(std::function<void()> f);
 };
 

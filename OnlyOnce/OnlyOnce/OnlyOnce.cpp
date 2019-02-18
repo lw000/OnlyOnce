@@ -1,6 +1,5 @@
 #include "pch.h"
 #include "OnlyOnce.h"
-#include <iostream>
 
 OnlyOnce::OnlyOnce()
 {
@@ -24,8 +23,4 @@ void OnlyOnce::Do(std::function<void()> f) {
 			f();
 		}
 	}
-}
-
-void OnlyOnce::DoFunc(std::function<void()> f) {
-	this->Do(f);
 }
